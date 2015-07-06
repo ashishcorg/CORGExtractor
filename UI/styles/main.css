@@ -1,0 +1,202 @@
+#profile-img{
+margin:12px;
+cursor:pointer;
+}
+#profile-img:hover{
+margin:10px;
+border:2px solid #ccc;
+}
+
+#menu {
+  margin-top: 64px;
+  position: fixed;
+  background-color: #f9f9f9;
+  height: 100%;
+  z-index: 10;
+  width: 280px;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.menu-list-group-item{
+//padding:10px 15px;
+line-height: 1;
+border: 0px;
+border-bottom: 2px solid #dddddd;
+font-size: large;
+}
+.left { left: -280px; }
+
+.show { left: 0; }
+
+#collapse-panel{
+border-radius: 0px; 
+-webkit-box-shadow: 0px !important; 
+box-shadow: 0px !important;
+margin-bottom:0px;
+}
+.flag-V{
+line-height: inherit;
+background-color:#b9151b !important;
+min-width: 28px;
+color: #ffF;
+text-align: center;
+border-radius: 10PX;
+}
+.flag-H{
+line-height: inherit;
+background-color:#ff9800 !important;
+min-width: 28px;
+color: #ffF;
+text-align: center;
+border-radius: 10PX;
+}
+.flag-M{
+line-height: inherit;
+background-color:#9c27b0 !important;
+min-width: 28px;
+color: #ffF;
+text-align: center;
+border-radius: 10PX;
+}
+.flag-L{
+line-height: inherit;
+background-color:#4caf50 !important;
+min-width: 28px;
+color: #ffF;
+text-align: center;
+border-radius: 10PX;
+}
+.flag-I{
+line-height: inherit;
+background-color:#2196f3 !important;
+min-width: 28px;
+color: #ffF;
+text-align: center;
+border-radius: 10PX;
+}
+#container { padding: 50px; }
+.form-group{
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+.crisp-panel-heading {
+border-top-right-radius: 0px; 
+border-top-left-radius: 0px; 
+background-color: #fff !important;
+//padding:15px;
+cursor: pointer;
+}
+.panel-group-crisp{
+margin-top:10px;
+margin-bottom:10px;
+}
+.crisp-span{
+margin-left:20px;
+}
+.expaned-panel{
+margin-bottom:10px !important;
+margin-top:10px !important;
+}
+.crisp-panel-footer{
+//margin-bottom:10px;
+}
+.crisp-panel{
+border-radius: 0px !important;
+}
+.crisp-panel-margin{
+margin-top: 0px !important;
+}
+.paper{
+background-color: #fff;
+padding: 20px;
+-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+-moz-box-shadow: 3px 3px 5px 6px #ccc;
+box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.editor-toolbar-spacing{
+margin-left: 5px;
+margin-right: 5px;
+}
+.editor-help-bg{
+background: url(../images/bg.PNG);
+background-repeat: no-repeat;
+}
+
+// horizontal tabs
+/*  bhoechie tab */
+div.bhoechie-tab-container{
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 0 !important;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  border:1px solid #ddd;
+  margin-top: 20px;
+  margin-left: 50px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  background-clip: padding-box;
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+}
+div.bhoechie-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a .glyphicon,
+div.bhoechie-tab-menu div.list-group>a .fa {
+  //color: #2196f3;
+}
+div.bhoechie-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+  //background-color: #2196f3;
+  //background-image: #2196f3;
+  color: #ffffff;
+}
+div.bhoechie-tab-menu div.list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #2196f3;
+}
+
+div.bhoechie-tab-content{
+  background-color: #ffffff;
+  /* border: 1px solid #eeeeee; */
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+  display: none;
+
+//CSS for control material UI
+//[placeholder]:focus::-webkit-input-placeholder {color: transparent;}
+.form-control:focus::-webkit-input-placeholder{color:transparent};
+//.form-control:focus::.control-desc{color: #fff};
+

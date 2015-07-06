@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%" lang="en">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Retro Analysis</title>
+
+</head>
+
+<link rel="stylesheet" type="text/css" href="styles/config.css">
+<link rel="stylesheet" type="text/css" href="third-party/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="third-party/font-awesome-4.2.0/css/font-awesome.min.css" />
+
+<script type="text/javascript" src="third-party/jquery/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="third-party/highcharts/js/highcharts.js" ></script>
+<script data-main="config.js" src="third-party/bootstrap/js/bootstrap.min.js"></script>
+<script>
+
+function menuOpen(e){
+	//e.preventDefault();
+			$("#menu").toggleClass("show");
+};
+$( document ).ready(function() {
+  feedbackClose()
+  $("#showmenu").click(function(e){
+			e.preventDefault();
+			$("#menu").toggleClass("show");
+		});
+$("#menu a").click(function(event){
+	event.preventDefault();
+	if($(this).next('ul').length){
+		$(this).next().toggle('fast');
+		$(this).children('i:last-child').toggleClass('fa-caret-down fa-caret-left');
+	}
+});
+
+
+});
+</script>
+
+<body style="height:100%; background-color:#F2F2F2;">
+
+<!-- menu vertical -->
+<nav id="menu" class="left">
+  <ul>
+    <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
+    <li><a href="#"><i class="fa fa-info-circle"></i>About</a></li>
+    <li> <a href="#"><i class="fa fa-laptop"></i>Services <i class="fa fa-caret-down"></i></a>
+      <ul>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Service</a></li>
+      </ul>
+    </li>
+    <li><a href="#"><i class="fa fa-phone"></i>Contact</a></li>
+  </ul>
+   </nav>
+<!-- /menu vertical --> 
+
+
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	<ul class="nav navbar-nav">
+	  
+        
+        <li><a href="#" id=""> <i class="fa fa-align-justify" onclick="menuOpen()"></i> </a></li>
+        <li><a class="navbar-brand" href="#">WebSiteName</a></li>
+      </ul>
+    </div>
+    <div>
+      
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" ondrop="drop(event)" ondragover="allowDrop(event)">
+      
+      
+      <div class="row">
+        <div class="col-sm-8" >
+		<!--Tile container-->
+		<div class="row">
+		<!--Tile-->
+		<div class="col-sm-4 ">		
+	<div class="thumbnail tile tile-medium tile-teal custom_tiles">
+		<div class="row">
+		<div class="col-sm-4 ">
+		<div class="c1">
+		<img src="images/download.jpg" class="img-circle profile_img" alt="Cinque Terre">
+		</div>
+		</div>
+		<div class="col-sm-8 textdix">
+		<h1>5</h1><h4>Feedbacks</h4>
+		</div>
+		</div>
+		</div>		
+	</div>
+	<!--Tile-->
+	<!--Tile-->
+		<div class="col-sm-4 ">		
+	<div class="thumbnail tile tile-medium tile-teal custom_tiles">
+		<div class="row">
+		<div class="col-sm-4 ">
+		<div class="c4">
+		<img src="images/download.jpg" class="img-circle profile_img" alt="Cinque Terre">
+		</div>
+		</div>
+		<div class="col-sm-8 textdix">
+		<h1>5</h1><h4>Feedbacks</h4>
+		</div>
+		</div>
+		</div>		
+	</div>
+	<!--Tile-->
+	<!--Tile-->
+		<div class="col-sm-4 ">		
+	<div class="thumbnail tile tile-medium tile-teal custom_tiles">
+		<div class="row">
+		<div class="col-sm-4 ">
+		<div class="c2">
+		<img src="images/download.jpg" class="img-circle profile_img" alt="Cinque Terre">
+		</div>
+		</div>
+		<div class="col-sm-8 textdix">
+		<h1>5</h1><h4>Feedbacks</h4>
+		</div>
+		</div>
+		</div>		
+	</div>
+	<!--Tile-->
+		</div>
+		<div class="row">
+		<!--Tile-->
+		<div class="col-sm-4 ">		
+	<div class="thumbnail tile tile-medium tile-teal custom_tiles">
+		<div class="row">
+		<div class="col-sm-4 ">
+		<div class="c2">
+		<img src="images/download.jpg" class="img-circle profile_img" alt="Cinque Terre">
+		</div>
+		</div>
+		<div class="col-sm-8 textdix">
+		<h1>5</h1><h4>Feedbacks</h4>
+		</div>
+		</div>
+		</div>		
+	</div>
+	<!--Tile-->
+	<!--Tile-->
+		<div class="col-sm-4 ">		
+	<div class="thumbnail tile tile-medium tile-teal custom_tiles">
+		<div class="row">
+		<div class="col-sm-4 ">
+		<div class="c3">
+		<img src="images/download.jpg" class="img-circle profile_img" alt="Cinque Terre">
+		</div>
+		</div>
+		<div class="col-sm-8 textdix">
+		<h1>5</h1><h4>Feedbacks</h4>
+		</div>
+		</div>
+		</div>		
+	</div>
+	<!--Tile-->
+	<!--Tile-->
+		<div class="col-sm-4 ">		
+	<div class="thumbnail tile tile-medium tile-teal custom_tiles">
+		<div class="row">
+		<div class="col-sm-4 ">
+		<div class="c4">
+		<img src="images/download.jpg" class="img-circle profile_img" alt="Cinque Terre">
+		</div>
+		</div>
+		<div class="col-sm-8 textdix">
+		<h1>5</h1><h4>Feedbacks</h4>
+		</div>
+		</div>
+		</div>		
+	</div>
+	<!--Tile-->
+		</div>
+		<!--Tile container-->
+		<div id="cat2"></div>
+		</div>
+		
+        <div class="col-sm-4">
+		<div class="custom-panel">
+<img src="images/download.jpg" class="img-circle profile-main-pic" alt="Cinque Terre">
+	<h3 class="name">Ashish Anand</h3>
+	<small class="label label-warning">Fellow, API Management</small>
+	<p></p>
+	<ul class="list-group">
+   <li class="list-group-item custom-list-group-item">Aku kie sing sok ngedolke omah-omah kae, yo iso di omongke makelar ngono sih. Tapi makelar nek payu ne akeh yo dadi sugih bro. Tenanan ra ngapusi.</li>
+   <li class="list-group-item custom-list-group-item">Aku kie sing sok ngedolke omah-omah kae, yo iso di omongke makelar ngono sih. Tapi makelar nek payu ne akeh yo dadi sugih bro. Tenanan ra ngapusi.</li>
+   <li class="list-group-item custom-list-group-item">Aku kie sing sok ngedolke omah-omah kae, yo iso di omongke makelar ngono sih. Tapi makelar nek payu ne akeh yo dadi sugih bro. Tenanan ra ngapusi.</li>
+   <li class="list-group-item custom-list-group-item">
+      <span class="badge custom-badge glyphicon glyphicon-user">3</span>
+      Aku kie sing sok ngedolke omah-omah kae, yo iso di  ngono sih. Tapi makelar nek payu ne akeh yo dadi sugih bro. Tenanan ra ngapusi.
+   </li>
+   <li class="list-group-item custom-list-group-item">
+      <span class="badge custom-badge glyphicon glyphicon-user">4</span>
+      Aku kie sing sok ngedolke omah-omah kae, yo iso  makelar ngono sih. Tapi makelar nek payu ne akeh yo dadi sugih bro. Tenanan ra ngapusi.
+   </li>
+</ul>
+	<div id="grap"></div>
+	</div>
+
+	
+  <span id="butt1" class="glyphicon glyphicon-pencil butt" aria-hidden="true" draggable="true" ondragstart="dragStart(event)" onclick="feedbackOpen()"></span>
+  <div id="retrofeedback" class="panel panel-default custom-message-panel">
+   <div class="panel-heading custom-message-panel-heading">
+   <span class="glyphicon glyphicon-remove-sign custom-close" style="left: 95%;" onclick="feedbackClose()"></span>
+   Provide your Retro feedback
+   </div>
+   <div class="panel-body custom-message-panel-body">
+      <textarea placeholder="Your feedback here ..." rows="10" class="feedback-box" ></textarea>
+   </div>
+   <div class="panel-footer custom-message-panel-footer">
+   <span style="background-color: #3A76E5;padding: 6px 15px;color: #fff;font-size: medium;font-weight: 500;border-radius: 4px;">SEND</span>
+   </div>
+</div>
+
+
+</div>
+  
+</div>
+	
+    
+	
+  
+		
+      </div>
+
+    </div>
+
+
+</body>

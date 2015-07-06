@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cloud Ticket</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap-paper.css">
+  
+  <link rel="stylesheet" type="text/css" href="third-party/font-awesome-4.2.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  
+  
+  
+  <script type="text/javascript" src="third-party/jquery/jquery-1.9.1.min.js" ></script>
+  <script src="third-party/bootstrap/js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip();
+		$("#showmenu").click(function(e){
+			e.preventDefault();
+			$("#menu").toggleClass("show");
+		});
+		$(".custom-form-control").focus(function(e){
+			this.parentElement.children[0].style.visibility="visible"
+			//if(this.value===null||this.value==="")
+			this.parentElement.children[2].style.visibility="visible"
+		});
+		$(".custom-form-control").blur(function(e){
+			if(this.value===null||this.value==="")
+			this.parentElement.children[0].style.visibility="hidden"
+			this.parentElement.children[2].style.visibility="hidden"
+		});
+		$("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+		
+	});
+</script>
+
+</head>
+<body style="background-color:#F2F2F2;">
+
+<nav class="navbar navbar-inverse" style="border-radius: 0px;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	  <ul class="nav navbar-nav">
+        <li><a id="showmenu" class="navbar-brand" href="#"> <i class="fa fa-align-justify"></i></a></li>
+        <li><a class="navbar-brand" href="#">CloudTickets</a></li>
+      </ul>
+    </div>
+	<div class="navbar-header navbar-right">
+	  <ul class="nav navbar-nav">
+		<li><img id="profile-img" src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10703586_10205413370919704_4758383194658717472_n.jpg?oh=f952727833e37b9da8dfa9b2c2be7247&oe=5534431C&__gda__=1430487907_dbc650e024efd8bfa9ffdc5ca4d5cd09" class="img-circle" alt="Cinque Terre" width="40px" height="40px"data-toggle="tooltip" data-placement="bottom" data-original-title="View Profile"></li>
+        <li>
+			<a class="navbar-brand" href="/logout" data-toggle="tooltip" data-placement="bottom" data-original-title="Logout">
+				<i class="fa fa-power-off"></i>
+			</a>
+		</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- menu vertical -->
+<nav id="menu" class="left">
+  <div class="list-group" style="margin-bottom:0px;">
+    <a class="list-group-item menu-list-group-item" href="home.html" class="active">Home</a>
+    <a class="list-group-item menu-list-group-item" href="#">My Profile</a>
+    <a class="list-group-item menu-list-group-item" href="#">New ticket</a>
+  </div>
+  
+   <div class="panel panel-default" id="collapse-panel">
+		<div class="panel-heading" data-toggle="collapse" data-target="#collapseOne">			
+				<a href="#"><i class="icon-plus-sign"></i>My Tickets</a>			
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse in">
+			<div class="panel-body" style="padding:0px;">
+				<div class="list-group" style="margin-bottom:0px;">
+					<a class="list-group-item menu-list-group-item" href="#">New<span class="badge">25</span></a>
+					<a class="list-group-item menu-list-group-item" href="#">In-Process<span class="badge">25</span></a>
+					<a class="list-group-item menu-list-group-item" href="#">Require My Action<span class="badge">25</span></a>
+					<a class="list-group-item menu-list-group-item" href="#">Require My Confirmation<span class="badge">25</span></a>
+					<a class="list-group-item menu-list-group-item" href="#">Confimred<span class="badge">25</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="list-group" style="margin-bottom:0px;">
+		<a class="list-group-item menu-list-group-item" href="#">About</a>
+		<a class="list-group-item menu-list-group-item" href="#">Contact</a>
+	</div>
+   </nav>
+<!-- /menu vertical --> 
+
+<div class="container">
+<div class="paper">
+<form>
+	<div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bhoechie-tab-container">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+              <div class="list-group">
+                <a href="#" class="list-group-item active text-center">
+                  <i class="fa fa-user fa-2x"></i><br/>Basic Info
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <i class="fa fa-2x fa-phone"></i><br/>Contact Details
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <i class="fa fa-2x fa-certificate"></i><br/>Password Reset
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <i class="fa fa-2x fa-gear"></i><br/>Preferences
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+                <!-- flight section -->
+                <div class="bhoechie-tab-content active">
+                    <div class="form-group has-small">
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">First Name</label>
+					  <input contenteditable="true" spellcheck="true" type="text" class="form-control custom-form-control" id="inputLarge" placeholder="First Name" required>
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">provide your first name.</label>
+					</div>
+					<div class="form-group has-small">
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">Last Name</label>
+					  <input contenteditable="true" spellcheck="true" type="text" class="form-control custom-form-control" id="inputLarge" placeholder="Last Name" required>
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">provide your Last name.</label>
+					</div>
+					<div class="form-group has-small">
+					<label class="control-label" for="select">Sex</label>
+					<select class="form-control" id="select" required>
+						  <option value="1">Male</option>
+						  <option value="2">Female</option>
+						  
+					</select>
+					</div>
+                </div>
+                <!-- train section -->
+                <div class="bhoechie-tab-content">
+					<div class="form-group has-small">
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">email</label>
+					  <input contenteditable="true" spellcheck="true" type="email" class="form-control custom-form-control" id="inputLarge" placeholder="email" required>
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">provide your email address.</label>
+					</div>
+					<div class="form-group has-small">
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">Secondary email (optional)</label>
+					  <input contenteditable="true" spellcheck="true" type="email" class="form-control custom-form-control" id="inputLarge" placeholder="Secondary email">
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">provide your Secondary email address.</label>
+					</div>
+					<div class="form-group has-small">
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">Phone (Work)</label>
+					  <input contenteditable="true" spellcheck="true" type="number" class="form-control custom-form-control" id="inputLarge" placeholder="Phone (Work)" required>
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">provide your Phone (Work) number.</label>
+					</div>
+                    <div class="form-group has-small">
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">Mobile (Work)</label>
+					  <input contenteditable="true" spellcheck="true" type="number" class="form-control custom-form-control" id="inputLarge" placeholder="Mobile (Work)" required>
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">provide your Mobile (Work) number.</label>
+					</div>
+					<div class="form-group has-small">
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">Personal Mobile (optional)</label>
+					  <input contenteditable="true" spellcheck="true" type="number" class="form-control custom-form-control" id="inputLarge" placeholder="Mobile (Personal)">
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">provide your Personal Mobile number.</label>
+					</div>
+					
+					
+                </div>
+    
+                <!-- hotel search -->
+                <div class="bhoechie-tab-content">
+                    <div class="form-group has-small">
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">Password</label>
+					  <input contenteditable="true" spellcheck="true" type="password" class="form-control custom-form-control" id="inputLarge" placeholder="Password">
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">Select a new password</label>
+					</div>
+					<div class="form-group has-small">
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">Confirm Password</label>
+					  <input contenteditable="true" spellcheck="true" type="password" class="form-control custom-form-control" id="inputLarge" placeholder="Confirm Password">
+					  <label class="control-label" style="visibility:hidden;" for="inputLarge">Confirm Password</label>
+					</div>
+                </div>
+                <div class="bhoechie-tab-content">
+                    <center>
+                      <h1 class="glyphicon glyphicon-cutlery" style="font-size:12em;color:#55518a"></h1>
+                      <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                      <h3 style="margin-top: 0;color:#55518a">Restaurant Diirectory</h3>
+                    </center>
+                </div>
+            </div>
+        </div>
+  </div>
+<div style="padding-right:20px;" class="row">
+<button style="float:right;" type="submit" class="btn btn-primary btn-lg">Update profile</button>
+</div>	
+</form>
+	
+
+
+</div>
+</div>
+
+</body>
+</html>

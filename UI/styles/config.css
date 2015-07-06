@@ -1,0 +1,220 @@
+.profile_img{
+height: 120px !important;
+padding: 10px;
+}
+.custom_tiles{
+padding: 0px !important;
+border-radius: 4px !important;
+height: 120px;
+overflow: hidden;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.textdix{
+text-align: center;
+margin-top: 10px;
+color: #BFC2CD;
+}
+.c1{
+background-color: #1ABC9C;
+width:120px;
+overflow:hidden;
+}
+.c2{
+background-color: #F1C40F;
+width:120px;
+overflow:hidden;
+}
+.c3{
+background-color: #E74C3C;
+width:120px;
+overflow:hidden;
+}
+.c4{
+background-color: #9B59B6;
+width:120px;
+overflow:hidden;
+}
+.custom-panel-heading{
+background-color: #fff !important;
+border-color: #fff !important;
+}
+.custom-panel-body{
+background-color: #ECF0F1 !important ;
+border: 4px solid #fff;
+text-align: center;
+}
+.custom-panel{
+background-color: #ECF0F1 !important;
+border: 4px solid #fff !important;
+border-radius: 4px !important;
+text-align: center;
+}
+.profile-main-pic{
+height: 120px !important;
+border: 6px solid #BDC3C7;
+margin-top:10px;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.name{
+font-family: "Open Sans", sans-serif;
+font-weight: 400;
+margin-top: 10px !important;
+margin-bottom: 5px !important;
+}
+. highcharts-background{
+background-color: transparent !important;
+}
+.butt{
+position:fixed !important;
+//top: 90% !important;
+//left: 50% !important;
+cursor:pointer;
+width: 60px;
+height: 60px;
+background-color: #db4437;
+border-radius: 60px;
+/* border: 5px solid #fff; */
+text-align: center;
+line-height: 60px !important;
+font-size: x-large;
+color: #fff;
+font-weight: 700;
+box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+.custom-badge{
+background-color:#FCB322 !important;
+color:#fff;
+margin-top:5px;
+}
+.custom-list-group-item{
+margin-top:0px !important;
+border-radius:0px !important;
+background-color: #ECF0F1 !important ;
+}
+#grap{
+margin-top:-50px;
+}
+
+.custom-message-panel{
+position:fixed !important;
+bottom: 0px !important;
+right: 20px !important;
+width:500px;
+}
+.custom-message-panel-heading{
+background-color: #555555 !important;
+color: #fff !important;
+font-weight: 800;
+}
+.custom-message-panel-body{
+}
+.custom-message-panel-footer{
+border-radius:0px !important;
+}
+.custom-close{
+cursor: pointer;
+}
+.custom-close:hover{
+color: burlywood;
+}
+
+.feedback-box{
+border: 0px;
+width: 100%;
+}
+
+#menu {
+  margin-top: 50px;
+  position: fixed;
+  background-color: #222;
+  height: 100%;
+  z-index: 10;
+  width: 280px;
+  color: #bbb;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 1;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#menu ul {
+  list-style: none;
+  margin-top: 0;
+  padding: 0
+}
+
+#menu ul li { border-bottom: 1px solid #2a2a2a; }
+
+#menu>ul>li>a { border-left: 4px solid #222; }
+
+#menu ul li a {
+  color: inherit;
+  font-size: 16px;
+  display: block;
+  padding: 8px 0 8px 7px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+#menu ul a i {
+  margin-right: 10px;
+  font-size: 18px;
+  margin-top: 3px;
+  width: 20px;
+}
+
+#menu ul a i[class*='fa-caret'] { float: right; }
+
+#menu ul a:hover,
+#menu ul a.active {
+  background-color: #111;
+  border-left-color: #FFCC33;
+  color: #FFCC33;
+}
+
+#menu ul a:hover i:first-child { color: #FFCC33; }
+
+/* Submenu */
+
+#menu ul li a.active+ul { display: block }
+
+#menu ul li ul {
+  margin-top: 0;
+  display: none;
+}
+
+#menu ul li ul li { border-bottom: none; }
+
+#menu ul li ul li a { padding-left: 30px; }
+
+#menu ul li ul li a:hover { background-color: #1A1A1A; }
+
+/* /Submenu */
+
+
+/* Cuando este a la Izq, para esconderlo posicionarlo a la Izq a -width */
+
+.left { left: -280px; }
+
+.show { left: 0; }
+
+#showmenu {
+  margin-left: 100%;
+  position: absolute;
+  top: 0;
+  padding: 6px 10px 7px 10px;
+  font-size: 1.3em;
+  color: #FFCC33;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#container { padding: 50px; }

@@ -1,0 +1,121 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 warn package.json Cloud-tickets@0.0.2 No repository field.
+5 warn package.json Cloud-tickets@0.0.2 No README data
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ 'c:\\Users\\i073642\\Desktop\\Daily Work Doc\\CRM',
+7 verbose install   [ 'bcryptjs',
+7 verbose install     'express',
+7 verbose install     'express3-handlebars',
+7 verbose install     'orchestrate',
+7 verbose install     'passport',
+7 verbose install     'passport-facebook',
+7 verbose install     'passport-google',
+7 verbose install     'passport-local',
+7 verbose install     'passport-twitter',
+7 verbose install     'passport-Google-OAuth',
+7 verbose install     'q' ] ]
+8 info preinstall Cloud-tickets@0.0.2
+9 warn package.json orchestrate@0.1.2 No repository field.
+10 verbose readDependencies using package.json deps
+11 verbose already installed skipping bcryptjs@^0.7.12 c:\Users\i073642\Desktop\Daily Work Doc\CRM
+12 verbose already installed skipping express@^3.5.0 c:\Users\i073642\Desktop\Daily Work Doc\CRM
+13 verbose already installed skipping express3-handlebars@^0.5.0 c:\Users\i073642\Desktop\Daily Work Doc\CRM
+14 verbose already installed skipping orchestrate@^0.1.2 c:\Users\i073642\Desktop\Daily Work Doc\CRM
+15 verbose already installed skipping passport@^0.2.0 c:\Users\i073642\Desktop\Daily Work Doc\CRM
+16 verbose already installed skipping passport-facebook@^1.0.3 c:\Users\i073642\Desktop\Daily Work Doc\CRM
+17 verbose already installed skipping passport-google@^0.3.0 c:\Users\i073642\Desktop\Daily Work Doc\CRM
+18 verbose already installed skipping passport-local@^1.0.0 c:\Users\i073642\Desktop\Daily Work Doc\CRM
+19 verbose already installed skipping passport-twitter@^1.0.2 c:\Users\i073642\Desktop\Daily Work Doc\CRM
+20 verbose cache add [ 'passport-Google-OAuth@0.1.5', null ]
+21 verbose cache add name=undefined spec="passport-Google-OAuth@0.1.5" args=["passport-Google-OAuth@0.1.5",null]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: 'passport-Google-OAuth@0.1.5',
+22 verbose parsed url   path: 'passport-Google-OAuth@0.1.5',
+22 verbose parsed url   href: 'passport-Google-OAuth@0.1.5' }
+23 verbose already installed skipping q@^1.0.1 c:\Users\i073642\Desktop\Daily Work Doc\CRM
+24 verbose cache add name="passport-Google-OAuth" spec="0.1.5" args=["passport-Google-OAuth","0.1.5"]
+25 verbose parsed url { protocol: null,
+25 verbose parsed url   slashes: null,
+25 verbose parsed url   auth: null,
+25 verbose parsed url   host: null,
+25 verbose parsed url   port: null,
+25 verbose parsed url   hostname: null,
+25 verbose parsed url   hash: null,
+25 verbose parsed url   search: null,
+25 verbose parsed url   query: null,
+25 verbose parsed url   pathname: '0.1.5',
+25 verbose parsed url   path: '0.1.5',
+25 verbose parsed url   href: '0.1.5' }
+26 verbose addNamed [ 'passport-Google-OAuth', '0.1.5' ]
+27 verbose addNamed [ '0.1.5', '0.1.5' ]
+28 silly lockFile 658d2d8b-passport-Google-OAuth-0-1-5 passport-Google-OAuth@0.1.5
+29 verbose lock passport-Google-OAuth@0.1.5 C:\Users\i073642\AppData\Roaming\npm-cache\658d2d8b-passport-Google-OAuth-0-1-5.lock
+30 verbose request where is /passport-Google-OAuth
+31 verbose request registry https://registry.npmjs.org/
+32 verbose request id 40fdb892ce08a45c
+33 verbose url raw /passport-Google-OAuth
+34 verbose url resolving [ 'https://registry.npmjs.org/', './passport-Google-OAuth' ]
+35 verbose url resolved https://registry.npmjs.org/passport-Google-OAuth
+36 verbose request where is https://registry.npmjs.org/passport-Google-OAuth
+37 info trying registry request attempt 1 at 23:16:55
+38 http GET https://registry.npmjs.org/passport-Google-OAuth
+39 http 404 https://registry.npmjs.org/passport-Google-OAuth
+40 verbose headers { date: 'Sun, 28 Dec 2014 17:46:55 GMT',
+40 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+40 verbose headers   'content-type': 'application/json',
+40 verbose headers   'cache-control': 'max-age=0',
+40 verbose headers   'content-length': '52',
+40 verbose headers   'accept-ranges': 'bytes',
+40 verbose headers   via: '1.1 varnish',
+40 verbose headers   age: '0',
+40 verbose headers   'x-served-by': 'cache-lax1434-LAX',
+40 verbose headers   'x-cache': 'MISS',
+40 verbose headers   'x-cache-hits': '0',
+40 verbose headers   'x-timer': 'S1419788815.340969,VS0,VE43',
+40 verbose headers   'keep-alive': 'timeout=10, max=50',
+40 verbose headers   connection: 'Keep-Alive' }
+41 silly registry.get cb [ 404,
+41 silly registry.get   { date: 'Sun, 28 Dec 2014 17:46:55 GMT',
+41 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+41 silly registry.get     'content-type': 'application/json',
+41 silly registry.get     'cache-control': 'max-age=0',
+41 silly registry.get     'content-length': '52',
+41 silly registry.get     'accept-ranges': 'bytes',
+41 silly registry.get     via: '1.1 varnish',
+41 silly registry.get     age: '0',
+41 silly registry.get     'x-served-by': 'cache-lax1434-LAX',
+41 silly registry.get     'x-cache': 'MISS',
+41 silly registry.get     'x-cache-hits': '0',
+41 silly registry.get     'x-timer': 'S1419788815.340969,VS0,VE43',
+41 silly registry.get     'keep-alive': 'timeout=10, max=50',
+41 silly registry.get     connection: 'Keep-Alive' } ]
+42 silly lockFile 658d2d8b-passport-Google-OAuth-0-1-5 passport-Google-OAuth@0.1.5
+43 silly lockFile 658d2d8b-passport-Google-OAuth-0-1-5 passport-Google-OAuth@0.1.5
+44 error 404 404 Not Found: passport-Google-OAuth
+44 error 404
+44 error 404 'passport-Google-OAuth' is not in the npm registry.
+44 error 404 You should bug the author to publish it
+44 error 404 It was specified as a dependency of 'Cloud-tickets'
+44 error 404
+44 error 404 Note that you can also install from a
+44 error 404 tarball, folder, or http url, or git url.
+45 error System Windows_NT 6.1.7601
+46 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+47 error cwd c:\Users\i073642\Desktop\Daily Work Doc\CRM
+48 error node -v v0.10.33
+49 error npm -v 1.4.28
+50 error code E404
+51 verbose exit [ 1, true ]

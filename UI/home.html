@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cloud Ticket</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap-paper.css">
+  <link rel="stylesheet" type="text/css" href="third-party/font-awesome-4.2.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  
+  <!--
+  <script type="text/javascript" src="third-party/jquery/jquery-1.9.1.min.js" ></script>
+  <script src="third-party/bootstrap/js/bootstrap.min.js"></script>
+  -->
+  <script data-main="js/main" src="js/libs/require/require.js"></script>
+  
+  
+
+</head>
+<body style="background-color:#F2F2F2;">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style="border-radius: 0px;">
+  
+    <div class="navbar-header">
+	  <ul class="nav navbar-nav">
+        <li><a id="showmenu" class="navbar-brand" href="#"> <i class="fa fa-align-justify"></i></a></li>
+        <li><a class="navbar-brand" href="#">CloudTickets</a></li>
+      </ul>
+    </div>
+	<div class="navbar-header navbar-right">
+	  <ul class="nav navbar-nav">
+		<li>
+		<a class="navbar-brand" href="#/Profile">
+		<img id="profilepic" style="margin-top:-8px;" src="" alt="Cinque Terre" width="40px" height="40px" data-toggle="tooltip" data-placement="bottom" data-original-title="View Profile"></a></li>
+        <li>
+			<a style="padding-right:30px;" class="navbar-brand" href="/logout" data-toggle="tooltip" data-placement="bottom" data-original-title="Logout">
+				<i class="fa fa-power-off"></i>
+			</a>
+		</li>
+      </ul>
+    </div>
+  
+</nav>
+
+<!-- menu vertical -->
+<nav id="menu" class="left">
+  <div class="list-group" style="margin-bottom:0px;">
+    <a class="list-group-item menu-list-group-item" href="#" class="active">Home</a>
+    <a class="list-group-item menu-list-group-item" href="#/Profile">My Profile</a>
+    <a class="list-group-item menu-list-group-item" href="#/createticket">New ticket</a>
+	<a class="list-group-item menu-list-group-item" href="#/supportInbox">Inbox</a>
+  </div>
+  
+   <div class="panel panel-default" id="collapse-panel">
+		<div class="panel-heading" data-toggle="collapse" data-target="#collapseOne">			
+				<a href="#"><i class="icon-plus-sign"></i>My Tickets</a>			
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse in">
+			<div class="panel-body" style="padding:0px;">
+				<div class="list-group" style="margin-bottom:0px;">
+					<a class="list-group-item menu-list-group-item" href="#">New<span class="badge">25</span></a>
+					<a class="list-group-item menu-list-group-item" href="#">Draft<span class="badge">25</span></a>
+					<a class="list-group-item menu-list-group-item" href="#">In-Process<span class="badge">25</span></a>
+					<a class="list-group-item menu-list-group-item" href="#">Require My Action<span class="badge">25</span></a>
+					<a class="list-group-item menu-list-group-item" href="#">Require My Confirmation<span class="badge">25</span></a>
+					<a class="list-group-item menu-list-group-item" href="#">Confimred<span class="badge">25</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="list-group" style="margin-bottom:0px;">
+		<a class="list-group-item menu-list-group-item" href="#">About</a>
+		<a class="list-group-item menu-list-group-item" href="#">Contact</a>
+	</div>
+   </nav>
+<!-- /menu vertical --> 
+
+<div class="container" id="contentView" style="margin-top:74px;">
+	
+</div>
+
+</body>
+</html>

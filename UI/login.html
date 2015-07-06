@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+			
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Cloud Tickets</title>
+
+</head>
+
+
+<link rel="stylesheet" type="text/css" href="third-party/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="styles/login.css">
+<link rel="stylesheet" type="text/css" href="third-party/font-awesome-4.2.0/css/font-awesome.min.css" />
+
+<script type="text/javascript" src="third-party/jquery/jquery-1.9.1.min.js" ></script>
+<script src="third-party/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="js/background.js"></script>
+<script>
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+$(function(){
+	this.signin = $("#form1");
+	this.signup = $("#form2");
+	$("#form2").remove();
+	$('#login-message')[0].innerHTML=getParameterByName('message');
+	
+});
+$(document).ready(function() {
+    $(document).mousemove(function(event) {
+        TweenLite.to($("body"), 
+        .5, {
+            css: {
+                backgroundPosition: "" + parseInt(event.pageX / 8) + "px " + parseInt(event.pageY / '12') + "px, " + parseInt(event.pageX / '15') + "px " + parseInt(event.pageY / '15') + "px, " + parseInt(event.pageX / '30') + "px " + parseInt(event.pageY / '30') + "px",
+            	"background-position": parseInt(event.pageX / 8) + "px " + parseInt(event.pageY / 12) + "px, " + parseInt(event.pageX / 15) + "px " + parseInt(event.pageY / 15) + "px, " + parseInt(event.pageX / 30) + "px " + parseInt(event.pageY / 30) + "px"
+            }
+        })
+    });
+	$("#register").click(function(event){
+		$("#form1").remove();
+		$("#formcontainer").append($(document)[0].signup);
+	});
+})
+</script>
+
+<body>
+<div class="container">
+                <div class="row vertical-offset-100">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">                           
+                                    <img src="images/corg.png" class="img-responsive" alt="Conxole Admin"/>
+                            </div>
+                            <div id="formcontainer" class="panel-body">
+                                <form id="form1" accept-charset="UTF-8" role="form" class="form-signin" action="/login" method="post">
+                                    <fieldset>
+                                        <label id="login-message" class="panel-login" style="color: rgb(218, 37, 72);"></label>
+										<div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+											<input class="form-control" placeholder="Email or Mobile Number" id="username" type="text" name="username" required>
+											
+										</div>
+										</div>
+                                        <div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+											<input class="form-control" placeholder="Password" id="password" type="password" name="password" required>
+											
+										</div>
+										</div>
+                                        <div class="row">
+										  <div class="col-sm-6">
+											<label>
+											  <input type="checkbox" style="margin: 0px !important;" name="cook" value="yes">
+											 Stay signed in.
+											</label>
+										  </div>
+										  <div class="col-sm-6" style="text-align: right;"><a href="/auth/google">Forget Password?</a></div>
+										</div>
+                                        
+                                        <input class="btn btn-lg btn-success btn-block" type="submit" id="login" value="Login">
+										<button id="register" type="button" class="btn btn-lg btn-danger btn-block">Sign-up</button>
+										</br>
+										<label class="login-with">Or login with</label>
+										<div class="btn-toolbar" style="text-align: center;" role="toolbar">
+										<a href="/auth/google"><button type="button" class="btn btn-lg btn-google-plus"><i class="fa fa-google-plus"></i></button></a>
+										<a href="/auth/facebook"><button type="button" class="btn btn-lg btn-facebook"><i class="fa fa-facebook"></i></button></a>
+										<a href="/auth/twitter"><button type="button" class="btn btn-lg btn-twitter"><i class="fa fa-twitter"></i></button></a>					  
+										</div>
+										
+                                    </fieldset>
+                                </form>
+								
+								
+								<!--  Sign Up form   -->
+								<form id="form2" accept-charset="UTF-8" role="form" class="form-signin" action="/signup" method="post">
+                                    <fieldset>
+                                        <label class="panel-login"></label>
+										<div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon"><span class="glyphicon"><b>@</b></span></span>
+											<input style="margin-bottom: 0px!important;" class="form-control" placeholder="Email" id="username1" type="email" name="username" required>
+											
+										</div>
+										</div>
+                                        <div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+											<input style="margin-bottom: 0px!important;" class="form-control" placeholder="Password" id="password1" type="password" name="password" required>
+											
+										</div>
+										</div>
+                                        
+										<div class="form-group">
+										<div class="input-group">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+											<input style="margin-bottom: 0px!important;" class="form-control" placeholder="Confirm Password" id="password2" type="password" name="password1" required>
+											
+										</div>
+										</div>
+                                        
+                                        <input class="btn btn-lg btn-success btn-block" type="submit" id="login" value="Register">
+										</br>
+										
+										
+                                    </fieldset>
+                                </form>
+								
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</body>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cloud Ticket</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap-paper.css">
+  <link rel="stylesheet" type="text/css" href="third-party/font-awesome-4.2.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  
+  <!--
+  <script type="text/javascript" src="third-party/jquery/jquery-1.9.1.min.js" ></script>
+  <script src="third-party/bootstrap/js/bootstrap.min.js"></script>
+  -->
+  <script data-main="js/main" src="js/libs/require/require.js"></script>
+  
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip();
+		$("#showmenu").click(function(e){
+			e.preventDefault();
+			$("#menu").toggleClass("show");
+		});
+		$(".custom-form-control").focus(function(e){
+			//e.preventDefault();
+			//$("#menu").toggleClass("show");
+			this.parentElement.children[0].style.visibility="visible"
+			this.parentElement.children[2].style.visibility="visible"
+		});
+		$(".custom-form-control").blur(function(e){
+			//e.preventDefault();
+			//$("#menu").toggleClass("show");
+			this.parentElement.children[0].style.visibility="hidden"
+			this.parentElement.children[2].style.visibility="hidden"
+		});
+		$(".crisp-panel-heading").click(function(e){
+			//e.preventDefault();
+			//$("#menu").toggleClass("show");
+			//this.parentElement.children[0].style.visibility="hidden"
+			//this.parentElement.children[2].style.visibility="hidden"
+			if($(this).next().hasClass("in")){
+				$(this).next().removeClass("in");
+				$(this).parents('.panel').addClass('crisp-panel-margin');
+				$(this).parents('.panel').removeClass('expaned-panel');
+			}
+			else{
+				$(this).parents('.panel-group').find('.panel').removeClass('expaned-panel');
+				$(this).parents('.panel-group').find('.panel').addClass('crisp-panel-margin');
+				$(this).parents('.panel-group').find('.panel-collapse').removeClass('in');
+				$(this).next().addClass("in");
+				$(this).parents('.panel').removeClass('crisp-panel-margin');
+				$(this).parents('.panel').addClass('expaned-panel');
+			}
+			
+		});
+		
+	});
+</script>
+
+</head>
+<body style="background-color:#F2F2F2;">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style="border-radius: 0px;">
+  
+    <div class="navbar-header">
+	  <ul class="nav navbar-nav">
+        <li><a id="showmenu" class="navbar-brand" href="#"> <i class="fa fa-align-justify"></i></a></li>
+        <li><a class="navbar-brand" href="#">CloudTickets</a></li>
+      </ul>
+    </div>
+	<div class="navbar-header navbar-right">
+	  <ul class="nav navbar-nav">
+		<li><img id="profile-img" src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10703586_10205413370919704_4758383194658717472_n.jpg?oh=f952727833e37b9da8dfa9b2c2be7247&oe=5534431C&__gda__=1430487907_dbc650e024efd8bfa9ffdc5ca4d5cd09" class="img-circle" alt="Cinque Terre" width="40px" height="40px"data-toggle="tooltip" data-placement="bottom" data-original-title="View Profile"></li>
+        <li>
+			<a class="navbar-brand" href="/logout" data-toggle="tooltip" data-placement="bottom" data-original-title="Logout">
+				<i class="fa fa-power-off"></i>
+			</a>
+		</li>
+      </ul>
+    </div>
+  
+</nav>
+
+<!-- menu vertical -->
+<nav id="menu" class="left">
+  <div class="list-group" style="margin-bottom:0px;">
+    <a class="list-group-item menu-list-group-item" href="home.html" class="active">Home</a>
+    <a class="list-group-item menu-list-group-item" href="#">My Profile</a>
+    <a class="list-group-item menu-list-group-item" href="createticket.html">New ticket</a>
+  </div>
+  
+   <div class="panel panel-default" id="collapse-panel">
+		<div class="panel-heading" data-toggle="collapse" data-target="#collapseOne">			
+				<a href="#"><i class="icon-plus-sign"></i>My Tickets</a>			
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse in">
+			<div class="panel-body" style="padding:0px;">
+				<div class="list-group" style="margin-bottom:0px;">
+					<a class="list-group-item menu-list-group-item" href="#">New<span class="badge">25</span></a>
+					<a class="list-group-item menu-list-group-item" href="#">In-Process<span class="badge">25</span></a>
+					<a class="list-group-item menu-list-group-item" href="#">Require My Action<span class="badge">25</span></a>
+					<a class="list-group-item menu-list-group-item" href="#">Require My Confirmation<span class="badge">25</span></a>
+					<a class="list-group-item menu-list-group-item" href="#">Confimred<span class="badge">25</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="list-group" style="margin-bottom:0px;">
+		<a class="list-group-item menu-list-group-item" href="#">About</a>
+		<a class="list-group-item menu-list-group-item" href="#">Contact</a>
+	</div>
+   </nav>
+<!-- /menu vertical --> 
+
+<div class="container" style="margin-top:74px;">
+	<span class="label label-danger crisp-span">Require your action</span>
+  <div class="panel-group panel-group-crisp" id="accordion">  
+  <div class="panel panel-default crisp-panel crisp-panel-margin">
+    <div class="panel-heading crisp-panel-heading">
+      <div class="panel-title">
+        <span class="accordion-toggle" >Collapsible Group Item #2
+		<span class="flag-vh pull-right badge">VH</span>
+		</span>
+      </div>
+    </div>
+    <div class="panel-collapse collapse">
+      <div class="panel-body">
+		  <div style="text-align: center;"><span style="font-size: 32px;">This is working now? </span></div><div>This should be working now.</div><ol><li>first</li><li>second</li><li>third</li><li><br></li></ol>
+		  <small>Someone famous in Source Title</small>
+      </div>
+	  <div class="panel-footer crisp-panel-footer">Panel footer</div>
+    </div>
+  </div>
+    <div class="panel panel-default crisp-panel crisp-panel-margin">
+    <div class="panel-heading crisp-panel-heading">
+      <div class="panel-title">
+        <span class="accordion-toggle" >Collapsible Group Item #2
+		<span class="flag-h pull-right badge">H</span>
+		</span>
+      </div>
+    </div>
+    <div class="panel-collapse collapse">
+      <div class="panel-body">
+		  <div style="text-align: center;"><span style="font-size: 32px;">This is working now? </span></div><div>This should be working now.</div><ol><li>first</li><li>second</li><li>third</li><li><br></li></ol>
+		  <small>Someone famous in Source Title</small>
+      </div>
+	  <div class="panel-footer crisp-panel-footer">Panel footer</div>
+    </div>
+  </div>
+  <div class="panel panel-default crisp-panel crisp-panel-margin">
+    <div class="panel-heading crisp-panel-heading">
+      <div class="panel-title">
+        <span class="accordion-toggle" >Collapsible Group Item #2
+		<span class="flag-h pull-right badge">H</span>
+		</span>
+      </div>
+    </div>
+    <div class="panel-collapse collapse">
+      <div class="panel-body">
+		  <div style="text-align: center;"><span style="font-size: 32px;">This is working now? </span></div><div>This should be working now.</div><ol><li>first</li><li>second</li><li>third</li><li><br></li></ol>
+		  <small>Someone famous in Source Title</small>
+      </div>
+	  <div class="panel-footer crisp-panel-footer">Panel footer</div>
+    </div>
+  </div>
+</div>
+
+	<span class="label label-warning crisp-span">Require your Confirmation</span>
+  <div class="panel-group panel-group-crisp" id="accordion">  
+  <div class="panel panel-default crisp-panel crisp-panel-margin">
+    <div class="panel-heading crisp-panel-heading">
+      <div class="panel-title">
+        <span class="accordion-toggle" >Collapsible Group Item #2
+		<span class="flag-vh pull-right badge">VH</span>
+		</span>
+      </div>
+    </div>
+    <div class="panel-collapse collapse">
+      <div class="panel-body">
+		  <div style="text-align: center;"><span style="font-size: 32px;">This is working now? </span></div><div>This should be working now.</div><ol><li>first</li><li>second</li><li>third</li><li><br></li></ol>
+		  <small>Someone famous in Source Title</small>
+      </div>
+	  <div class="panel-footer crisp-panel-footer">Panel footer</div>
+    </div>
+  </div>
+    <div class="panel panel-default crisp-panel crisp-panel-margin">
+    <div class="panel-heading crisp-panel-heading">
+      <div class="panel-title">
+        <span class="accordion-toggle" >Collapsible Group Item #2
+		<span class="flag-h pull-right badge">H</span>
+		</span>
+      </div>
+    </div>
+    <div class="panel-collapse collapse">
+      <div class="panel-body">
+		  <div style="text-align: center;"><span style="font-size: 32px;">This is working now? </span></div><div>This should be working now.</div><ol><li>first</li><li>second</li><li>third</li><li><br></li></ol>
+		  <small>Someone famous in Source Title</small>
+      </div>
+	  <div class="panel-footer crisp-panel-footer">Panel footer</div>
+    </div>
+  </div>
+  <div class="panel panel-default crisp-panel crisp-panel-margin">
+    <div class="panel-heading crisp-panel-heading">
+      <div class="panel-title">
+        <span class="accordion-toggle" >Collapsible Group Item #2
+		<span class="flag-h pull-right badge">H</span>
+		</span>
+      </div>
+    </div>
+    <div class="panel-collapse collapse">
+      <div class="panel-body">
+		  <div style="text-align: center;"><span style="font-size: 32px;">This is working now? </span></div><div>This should be working now.</div><ol><li>first</li><li>second</li><li>third</li><li><br></li></ol>
+		  <small>Someone famous in Source Title</small>
+      </div>
+	  <div class="panel-footer crisp-panel-footer">Panel footer</div>
+    </div>
+  </div>
+</div>
+
+
+
+<span class="label label-primary crisp-span">For your Information</span>
+  <div class="panel-group panel-group-crisp" id="accordion">  
+  <div class="panel panel-default crisp-panel crisp-panel-margin">
+    <div class="panel-heading crisp-panel-heading">
+      <div class="panel-title">
+        <span class="accordion-toggle" >Collapsible Group Item #2
+		<span class="flag-vh pull-right badge">VH</span>
+		</span>
+      </div>
+    </div>
+    <div class="panel-collapse collapse">
+      <div class="panel-body">
+		  <div style="text-align: center;"><span style="font-size: 32px;">This is working now? </span></div><div>This should be working now.</div><ol><li>first</li><li>second</li><li>third</li><li><br></li></ol>
+		  <small>Someone famous in Source Title</small>
+      </div>
+	  <div class="panel-footer crisp-panel-footer">Panel footer</div>
+    </div>
+  </div>
+    <div class="panel panel-default crisp-panel crisp-panel-margin">
+    <div class="panel-heading crisp-panel-heading">
+      <div class="panel-title">
+        <span class="accordion-toggle" >Collapsible Group Item #2
+		<span class="flag-h pull-right badge">H</span>
+		</span>
+      </div>
+    </div>
+    <div class="panel-collapse collapse">
+      <div class="panel-body">
+		  <div style="text-align: center;"><span style="font-size: 32px;">This is working now? </span></div><div>This should be working now.</div><ol><li>first</li><li>second</li><li>third</li><li><br></li></ol>
+		  <small>Someone famous in Source Title</small>
+      </div>
+	  <div class="panel-footer crisp-panel-footer">Panel footer</div>
+    </div>
+  </div>
+  <div class="panel panel-default crisp-panel crisp-panel-margin">
+    <div class="panel-heading crisp-panel-heading">
+      <div class="panel-title">
+        <span class="accordion-toggle" >Collapsible Group Item #2
+		<span class="flag-h pull-right badge">H</span>
+		</span>
+      </div>
+    </div>
+    <div class="panel-collapse collapse">
+      <div class="panel-body">
+		  <div style="text-align: center;"><span style="font-size: 32px;">This is working now? </span></div><div>This should be working now.</div><ol><li>first</li><li>second</li><li>third</li><li><br></li></ol>
+		  <small>Someone famous in Source Title</small>
+      </div>
+	  <div class="panel-footer crisp-panel-footer">Panel footer</div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+</body>
+</html>
